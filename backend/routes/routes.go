@@ -19,6 +19,7 @@ func Setup(router *gin.Engine, db *sql.DB) {
 	// GET:
 	// /article/<id>
 	// /article/<limit>/<offset>
+	router.GET("/article", handler.GetArticleOrPagination)
 	router.GET("/article/*path", handler.GetArticleOrPagination)
 
 	// Update article
