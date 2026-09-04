@@ -9,7 +9,7 @@ COPY . .
 
 RUN go build -o server .
 
-FROM debian:bookworm-slim
+FROM alpine:latest
 
 WORKDIR /app
 
